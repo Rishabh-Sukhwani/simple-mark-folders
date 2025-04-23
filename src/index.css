@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 263 71% 74%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -22,7 +22,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 258 100% 96%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -30,15 +30,15 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 263 71% 74%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 240 30% 99%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 263 71% 74%;
 
     --sidebar-primary-foreground: 0 0% 98%;
 
@@ -97,5 +97,84 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Prose styles for markdown rendering */
+@layer components {
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose h1 {
+    @apply text-2xl font-bold mt-8 mb-4;
+  }
+
+  .prose h2 {
+    @apply text-xl font-bold mt-8 mb-3;
+  }
+
+  .prose h3 {
+    @apply text-lg font-bold mt-6 mb-3;
+  }
+
+  .prose h4 {
+    @apply text-base font-bold mt-4 mb-2;
+  }
+
+  .prose p {
+    @apply my-4;
+  }
+
+  .prose ul {
+    @apply list-disc pl-5 my-3;
+  }
+
+  .prose ol {
+    @apply list-decimal pl-5 my-3;
+  }
+
+  .prose li {
+    @apply my-1;
+  }
+
+  .prose a {
+    @apply text-note-purple hover:underline;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-note-light-purple pl-4 italic my-4;
+  }
+
+  .prose code {
+    @apply bg-note-soft-gray rounded px-1 py-0.5;
+  }
+
+  .prose pre {
+    @apply bg-note-soft-gray rounded p-3 my-4 overflow-x-auto;
+  }
+
+  .bg-tag-blue {
+    @apply bg-tag-blue text-foreground;
+  }
+
+  .bg-tag-green {
+    @apply bg-tag-green text-foreground;
+  }
+
+  .bg-tag-yellow {
+    @apply bg-tag-yellow text-foreground;
+  }
+
+  .bg-tag-orange {
+    @apply bg-tag-orange text-foreground;
+  }
+
+  .bg-tag-pink {
+    @apply bg-tag-pink text-foreground;
+  }
+
+  .bg-tag-purple {
+    @apply bg-tag-purple text-foreground;
   }
 }
